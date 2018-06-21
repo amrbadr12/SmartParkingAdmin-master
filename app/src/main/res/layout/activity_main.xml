@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/main_layout"
+    android:background="@color/colorOffBlack"
+    android:layout_height="match_parent"
+    tools:context="com.smartparking.amrbadr12.smartparkingadmin.MainActivity">
+
+    <ListView
+        android:id="@+id/paired_devices_list"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginTop="8dp"
+        android:layout_below="@id/paired_label"
+
+        />
+    <ImageView
+        android:id="@+id/no_paired_devices"
+        android:layout_width="100dp"
+        android:background="@drawable/bluetooth_icon"
+        android:layout_marginTop="64dp"
+        android:layout_centerHorizontal="true"
+        android:alpha="0.7"
+        android:layout_height="100dp"
+        android:layout_below="@id/paired_label"
+        android:visibility="invisible"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:id="@+id/no_paired_devices_label"
+        android:layout_below="@+id/no_paired_devices"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"
+        android:text="No paired devices"
+        android:textColor="@color/colorWhite" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/paired_bluetooth_devices"
+        android:textColor="@color/colorText"
+        android:id="@+id/paired_label"
+        android:layout_marginStart="8dp"
+        />
+
+
+    <EditText
+        android:id="@+id/write_to_stream"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:hint="@string/input_stream"
+        android:textSize="16sp"
+        android:textColor="@color/colorWhite"
+        android:textColorHint="@color/colorWhite"
+        android:layout_above="@id/write_button"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="16dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/output_stream"
+        android:layout_marginTop="8dp"
+        android:id="@+id/output_stream_label"
+        android:layout_below="@id/paired_devices_list"
+        android:layout_marginLeft="16dp"
+        android:textColor="@color/colorWhite"
+        android:layout_marginStart="16dp" />
+    <Button
+        android:id="@+id/clear_log_button"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:textSize="12sp"
+        android:text="@string/clear_log"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/paired_devices_list"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="16dp" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginRight="8dp"
+        android:id="@+id/scrollview"
+        android:layout_marginEnd="8dp"
+        android:background="@color/colorPrimary"
+        android:layout_marginLeft="8dp"
+        android:layout_below="@id/output_stream_label"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp">
+        <TextView
+            android:id="@+id/read_stream_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorText"
+            android:padding="16dp"
+            />
+    </ScrollView>
+    <Button
+        android:id="@+id/write_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/write"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_alignParentBottom="true" />
+    <Button
+        android:id="@+id/disconnected_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="16dp"
+        android:layout_alignParentBottom="true"
+        android:text="@string/disconnect"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="16dp" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/qr_image"
+        android:visibility="invisible"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/bluetooth_icon"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:background="@drawable/bluetooth"
+        android:layout_margin="16dp"/>
+
+    <TextView
+        android:id="@+id/bt_name_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/bluetooth_icon"
+        android:layout_marginLeft="13dp"
+        android:textColor="@color/colorWhite"
+        android:layout_marginStart="13dp"
+        android:layout_toEndOf="@+id/bluetooth_icon"
+        android:layout_toRightOf="@+id/bluetooth_icon"
+        android:text="Name"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/bt_name_textview"
+        android:layout_alignStart="@+id/bt_name_textview"
+        android:layout_below="@+id/bt_name_textview"
+        android:text="Connected"
+        android:textColor="@color/colorText"
+        android:textSize="10sp"
+        android:id="@+id/connected_status_textview" />
+
+    <TextView
+        android:id="@+id/address_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/bt_name_textview"
+        android:layout_alignBottom="@+id/bt_name_textview"
+        android:layout_alignParentRight="true"
+        android:textSize="18sp"
+        android:layout_marginRight="16dp"
+        android:textColor="@color/colorText"
+        android:text="18H:15C:34E:10F"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="16dp" />
+
+</RelativeLayout>

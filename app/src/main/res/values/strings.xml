@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">SmartParkingAdmin</string>
+    <string name="disconnect">Disconnect</string>
+    <string name="write">write</string>
+    <string name="read">Read</string>
+    <string name="input_stream">Input Stream</string>
+    <string name="output_stream">Output Stream</string>
+    <string name="clear_log">Clear Log</string>
+    <string name="paired_bluetooth_devices">Paired Bluetooth Devices</string>
+</resources>
